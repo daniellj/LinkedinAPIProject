@@ -9,7 +9,7 @@ Basicamente será fornecida uma lista contendo nomes de empresas e, para cada um
 - Situação **(entityStatus)**
 - Nome **(vanityName)**
 - Id **(id)**
-- Tipo da indústria **(internet, alimentos, vestuário, etc) (industries)**
+- Tipo da indústria (internet, alimentos, vestuário, etc) **(industries)**
 - Ano da fundação **(foundedOn)**
 - Site **(website)**
 - Especialidade (recolocação de profissionais, alimentação vegana, roupas esportivas, etc) **(specialties)**
