@@ -4,7 +4,7 @@ Este projeto surgiu da necessidade de capturar informações de empresas contida
 
 Para desenvolver a atividade, é disponibilizada a REST API do [Organization Lookup API do Linkedin v2](https://developer.linkedin.com/docs/guide/v2/organizations/organization-lookup-api).
 
-Basicamente será fornecida uma lista contendo nomes de empresas e, para cada uma dessas empresas, a solução deverá enviar uma requisição de consulta para o Linkedin. A saída esperada deverá ser formatada de tal forma que apresente apenas os campos solicitados abaixo:
+Basicamente será fornecida uma lista contendo nomes de empresas e, para cada uma dessas empresas, a solução deverá retornar  apenas os dados dos campos solicitados abaixo:
 
 - Situação **(entityStatus)**
 - Nome **(vanityName)**
@@ -26,7 +26,10 @@ O formato da saída da requisição da consulta deverá ser exibida em tela e/ou
 
 # Lógica da solução desenvolvida
 
+- O Linkedin utiliza OAUTH 2.0. Após a criação da aplicação na rede social, é gerado automaticamente duas informações: **ClienteID** e **ClientSecret**. A combinação de **ClienteID**, **ClientSecret** e a **URL de Redirecionamento** irá gerar um **Código de Autorização**. Esse código é passado para o autenticador da rede social, que finalmente irá gerar o **token**, que nada mais é que a combinação das informações: **ClienteID**, **ClientSecret** e **Código de Autorização**.
+
 - Utilização de biblioteca [python-linkedin-v2](https://github.com/HootsuiteLabs/python-linkedin-v2) para requisições contra a REST API do Linkedin;
+
 - Criação de uma classe CompanyLinkedin, contendo os atributos necessários para servir de camada de abstração dos objetos retornados pelo Linkedin, assim como métodos utilizados pela classe (geração de arquivo JSON, exibição resultados em tela, etc);
 
 ## Requerimentos de ambiente
