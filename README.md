@@ -24,7 +24,7 @@ Basicamente será fornecida uma lista contendo nomes de empresas e, para cada um
 
 O formato da saída da requisição da consulta deverá ser exibida em tela e/ou um único arquivo JSON contendo os dados requisitados de todas as empresas fornecidas na lista de entrada.
 
-# Lógica da solução desenvolvida
+## Lógica da solução desenvolvida
 
 - O Linkedin utiliza OAUTH 2.0. Após a criação da aplicação na rede social, é gerado automaticamente duas informações: **ClienteID** e **ClientSecret**. A combinação de **ClienteID**, **ClientSecret** e a **URL de Redirecionamento** irá gerar um **Código de Autorização**. Esse código é passado para o autenticador da rede social, que finalmente irá gerar o **token**, que nada mais é que a combinação das informações: **ClienteID**, **ClientSecret** e **Código de Autorização**. Através deste token (que tem tempo de expiração, maiores detalhes ver documentação do Linkedin), será possível efetuar requisições para a rede social.
 
@@ -39,7 +39,8 @@ O formato da saída da requisição da consulta deverá ser exibida em tela e/ou
 
 ## Instalação
 
-Em desenvolvimento.
+1. Clonar este projeto via GIT ou download.
+2. Instalar as dependências do projeto (Python Libraries): via terminal do Linux, acessar a pasta onde se encontra o arquivo "requirements.txt". Após, digite/execute o comando à seguir: pip install -r requirements.txt
 
 ## Execução
 
