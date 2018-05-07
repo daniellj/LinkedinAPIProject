@@ -28,7 +28,9 @@ O formato da saída da requisição da consulta deverá ser exibida em tela e/ou
 
 - O Linkedin utiliza OAUTH 2.0. Após a criação da aplicação na rede social, é gerado automaticamente duas informações: **ClienteID** e **ClientSecret**. A combinação de **ClienteID**, **ClientSecret** e a **URL de Redirecionamento** irá gerar um **Código de Autorização**. Esse código é passado para o autenticador da rede social, que finalmente irá gerar o **token**, que nada mais é que a combinação das informações: **ClienteID**, **ClientSecret** e **Código de Autorização**. Através deste token (que tem tempo de expiração, maiores detalhes ver documentação do Linkedin), será possível efetuar requisições para a rede social.
 
-- Utilização de biblioteca [PyLinkedinAPI](https://github.com/johnidm/PyLinkedinAPI) para requisições contra a REST API do Linkedin;
+- Utilização da biblioteca [PyLinkedinAPI](https://github.com/johnidm/PyLinkedinAPI) para requisições contra a REST API do Linkedin;
+
+- Utilização da biblioteca [python-linkedin](https://github.com/ozgur/python-linkedin);
 
 - Criação de uma classe CompanyLinkedin, contendo os atributos necessários para servir de camada de abstração dos objetos retornados pelo Linkedin, assim como métodos utilizados pela classe (geração de arquivo JSON, exibição resultados em tela, etc);
 
