@@ -3,13 +3,12 @@
 """
 @author: daniellj
 """
-#from PyLinkedinAPI.PyLinkedinAPI import PyLinkedinAPI
 from requests_oauthlib import OAuth2Session
 import requests
 
 client_id = r'77pm3rcwpgc8xu'
 client_secret = r'CQtVXv6bxGxeRpkw'
-redirect_uri = 'https://localhost:8080'
+redirect_uri = r'https://localhost:8080'
 
 AUTH_URL = 'https://www.linkedin.com/uas/oauth2/authorization'
 ACCESS_TOKEN_URL = 'https://www.linkedin.com/uas/oauth2/accessToken'
@@ -25,8 +24,6 @@ token = oauth.fetch_token(ACCESS_TOKEN_URL, authorization_response=authorization
 print(token)
 
 access_token = token
-#linkedin = PyLinkedinAPI(access_token)
-
 
 def search_company_by_vanityName(companyname):
     #url_companies = 'https://api.linkedin.com/v2/organizations?q=vanityName&vanityName=' + str(companyname) + '?oauth2_access_token=' + str(access_token)
