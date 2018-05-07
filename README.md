@@ -30,7 +30,7 @@ O formato da saída da requisição da consulta deverá ser exibida em tela e/ou
 
 - Utilização da biblioteca [requests-oauthlib](https://github.com/requests/requests-oauthlib) para requisições contra a REST API do Linkedin;
 
-- Criação de uma classe CompanyLinkedin, contendo os atributos necessários para servir de camada de abstração dos objetos retornados pelo Linkedin, assim como métodos utilizados pela classe (geração de arquivo JSON, exibição resultados em tela, etc);
+- Criação de uma classe "Company", contendo os atributos necessários para servir de camada de abstração dos objetos retornados pelo Linkedin, assim como métodos utilizados pela classe (geração de arquivo JSON, exibição resultados em tela, etc);
 
 ## Requerimentos de ambiente
 
