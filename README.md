@@ -72,7 +72,7 @@ REDIRECT_RESPONSE=https://localhost:8080/?code=AQT_EcUxnuLX_npEy8L9S13cVxueJt7wY
 
 5. Salve e feche o arquivo "**linkedin_config**".
 
-6. Execute o script "**token-generate.py**". Será gerado o token de acesso pelo Linkedin, e escrito o valor do TOKEN dentro do arquivo "**new_token**". Guarde-o, pois o token será usado nas requisições so Linkedin.
+6. Execute o script "**token-generate.py**". Será gerado o token de acesso pelo Linkedin, e escrito o valor do TOKEN dentro do arquivo "**new_token**". Guarde-o, pois o token será usado nas requisições ao Linkedin.
 
 ## Execução
 
