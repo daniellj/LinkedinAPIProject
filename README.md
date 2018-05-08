@@ -48,13 +48,13 @@ Para efetuar requisições ao Linkedin, é necessário gerar o **token de acesso
 
 1. Após efetuar o clone deste repositório, editar o arquivo "**linkedin_config**". Este arquivo de configuração contêm os seguintes campos:
 
-[Secrets]
-CLIENT_ID=XXXXXX
-CLIENT_SECRET=YYYYYYYYYYY
-REDIRECT_URI=https://localhost:8080
-AUTHORIZATION_URL=https://www.linkedin.com/uas/oauth2/authorization
-ACCESS_TOKEN_URL=https://www.linkedin.com/uas/oauth2/accessToken
-REDIRECT_RESPONSE=
+[Secrets]<br />
+CLIENT_ID=XXXXXX<br />
+CLIENT_SECRET=YYYYYYYYYYY<br />
+REDIRECT_URI=https://localhost:8080<br />
+AUTHORIZATION_URL=https://www.linkedin.com/uas/oauth2/authorization<br />
+ACCESS_TOKEN_URL=https://www.linkedin.com/uas/oauth2/accessToken<br />
+REDIRECT_RESPONSE=<br />
 
 A instrução é colocar os valores para todos os respectivos campos após o sinal de "=" (**com excessão do campo REDIRECT_RESPONSE**, deixar sem valor), sem espaçamentos ou aspas envolvidas, salvar e fechar o arquivo. Importante lembrar que antes de tudo, você deve ter uma aplicação registrada no Linkedin, para de fato ter informações para preencher o arquivo de configuração "linkedin_config".
 
