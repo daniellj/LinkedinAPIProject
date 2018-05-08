@@ -42,6 +42,38 @@ O formato da saída da requisição da consulta deverá ser exibida em tela e/ou
 1. Clonar este projeto via GIT ou download.
 2. Instalar as dependências do projeto (Python Libraries): via terminal do Linux, acessar a pasta onde se encontra o arquivo "requirements.txt". Após, digite/execute o comando à seguir: pip install -r requirements.txt
 
+## Geração do Token
+
+Para efetuar requisições ao Linkedin, é necessário gerar o **token de acesso**. Para tanto, siga as instruções:
+
+1. Após efetuar o clone deste repositório, editar o arquivo "**linkedin_config**". Este arquivo de configuração contêm os seguintes campos:
+
+[Secrets]
+CLIENT_ID=XXXXXX
+CLIENT_SECRET=YYYYYYYYYYY
+REDIRECT_URI=https://localhost:8080
+AUTHORIZATION_URL=https://www.linkedin.com/uas/oauth2/authorization
+ACCESS_TOKEN_URL=https://www.linkedin.com/uas/oauth2/accessToken
+REDIRECT_RESPONSE=
+
+A instrução é colocar os valores para todos os respectivos campos após o sinal de "=" (**com excessão do campo REDIRECT_RESPONSE**, deixar sem valor), sem espaçamentos ou aspas envolvidas, salvar e fechar o arquivo. Importante lembrar que antes de tudo, você deve ter uma aplicação registrada no Linkedin, para de fato ter informações para preencher o arquivo de configuração "linkedin_config".
+
+2. No terminal do Linux, executar o script python: **authorization.py**. Após, será fornecida uma mensagem de que você deve copiar a URL gerada, colar no navegador de internet e clicar em ENTER. Feito isso, faça a autorização do APP: forneça suas credenciais no Linkedin, e AUTORIZE o APP. Será redirecionado para a página de REDIRECT configurada no APP.
+
+3. COPIE TODO O CONTEÚDO da URL que foi redirecionda. Algo como: https://localhost:8080/?code=AQT_EcUxnuLX_npEy8L9S13cVxueJt7wY_ngrfnmBaaMa8nXs4Jpe7CPPOD1OGU781GICNibxJ1yiXLVdhqj5XIyDVjUa_XyzD_fhN9L27CqD-zxA5DviASQ6tvLoEc5s4CGb5Pe8eQhD-hsb6E&state=MwPhX3lTngermCjwZ5NXrqeOo8Byb6#!
+
+4. Abra o arquivo "**linkedin_config**" novamente. COLE o conteúdo gerado pela URL redirecionada (ver passo 3!) logo após:
+
+REDIRECT_RESPONSE=
+
+Vai ficar algo como: 
+
+REDIRECT_RESPONSE=https://localhost:8080/?code=AQT_EcUxnuLX_npEy8L9S13cVxueJt7wY_ngrfnmBaaMa8nXs4Jpe7CPPOD1OGU781GICNibxJ1yiXLVdhqj5XIyDVjUa_XyzD_fhN9L27CqD-zxA5DviASQ6tvLoEc5s4CGb5Pe8eQhD-hsb6E&state=MwPhX3lTngermCjwZ5NXrqeOo8Byb6#!
+
+5. Salve e feche o arquivo "**linkedin_config**".
+
+6. Execute o script "**token-generate.py**". Será gerado o token de acesso pelo Linkedin, e escrito o valor do TOKEN dentro do arquivo "**new_token**". Guarde-o, pois o token será usado nas requisições so Linkedin.
+
 ## Execução
 
 Em desenvolvimento.
