@@ -56,7 +56,7 @@ Para efetuar requisições ao Linkedin, é necessário gerar o **token de acesso
   ACCESS_TOKEN_URL=https://www.linkedin.com/uas/oauth2/accessToken<br />
   REDIRECT_RESPONSE=<br />
 
-A instrução é colocar os valores para todos os respectivos campos após o sinal de "=" (**com excessão do campo REDIRECT_RESPONSE**, deixar sem valor), sem espaçamentos ou aspas envolvidas, salvar e fechar o arquivo. Importante lembrar que antes de tudo, você deve ter uma aplicação registrada no Linkedin, para de fato ter informações para preencher o arquivo de configuração "linkedin_config".
+A instrução é colocar valores válidos para os campos **CLIENT_ID**, **CLIENT_SECRET** e **REDIRECT_URI** após o sinal de "=", sem espaçamentos ou aspas envolvidas, salvar e fechar o arquivo. Importante lembrar que antes de tudo, você deve ter uma aplicação registrada no Linkedin, para de fato ter informações para preencher o arquivo de configuração "linkedin_config".
 
 2. No terminal do Linux, executar o script python: **authorization.py**. Após, será fornecida uma mensagem de que você deve copiar a URL gerada, colar no navegador de internet e clicar em ENTER. Feito isso, faça a autorização do APP: forneça suas credenciais no Linkedin, e AUTORIZE o APP. Será redirecionado para a página de REDIRECT configurada no APP.
 
