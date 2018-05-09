@@ -1,8 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Created on Mon May  7 01:16:07 2018
-
 @author: daniellj
 """
 
@@ -17,5 +15,4 @@ for comp in company_list:
     
 # mapear os valores de saída da função para os atributos da classe "Company".
 
-# imprimir os valores dos atributos da classe
-    
+# imprimir os valores dos atributos da classe  
