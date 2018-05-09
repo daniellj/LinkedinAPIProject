@@ -1,8 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Created on Mon May  7 20:24:54 2018
-
 @author: daniellj
 """
 
@@ -53,8 +51,3 @@ try:
 finally:
     print('Fechando o arquivo de origem', file_o)
     file_o.closed
-
-'''
-access_token = 'AQXygyThmXuWMfAw6ZqN6QYTp3erKx_WoR0puXyp7sfwpuZOhUy1amOSNptdayD6GEOlAFix6pLx-49o-bX0ct11kokBSRGtbsZwp998sjVgOaD-z7G6bMSeMOfqhd0wXmLgJFBIyZhmXDbjMDvE6gag1zxX5eKLamJKm3Ps7T5-FAchD6_0LIdUG0lSLN6sITLsK3q5K8oXts3OmjMR-VVNhHKQe-vxLTeKd-rg52midl_RdT_z-qwjlE7GD-OmXHMbFo9fykJv4R_qnNTIEpgtpuegIXqsMYIaaQVVdWsxOj4amc0CMfp8899g2XVIU_lJI7ssvFWO4_CrHTqo82wzGAbaZw'
-{'token_type': 'Bearer', 'expires_in': 5183999, 'expires_at': 1530920358.1948643, 'access_token': 'AQXygyThmXuWMfAw6ZqN6QYTp3erKx_WoR0puXyp7sfwpuZOhUy1amOSNptdayD6GEOlAFix6pLx-49o-bX0ct11kokBSRGtbsZwp998sjVgOaD-z7G6bMSeMOfqhd0wXmLgJFBIyZhmXDbjMDvE6gag1zxX5eKLamJKm3Ps7T5-FAchD6_0LIdUG0lSLN6sITLsK3q5K8oXts3OmjMR-VVNhHKQe-vxLTeKd-rg52midl_RdT_z-qwjlE7GD-OmXHMbFo9fykJv4R_qnNTIEpgtpuegIXqsMYIaaQVVdWsxOj4amc0CMfp8899g2XVIU_lJI7ssvFWO4_CrHTqo82wzGAbaZw'}
-'''
