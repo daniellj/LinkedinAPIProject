@@ -2,3 +2,4 @@ requests_oauthlib==0.8.0
 requests==2.18.4
 configparser==3.5.0
 python-linkedin==4.1
+mechanicalsoup=0.10.0
