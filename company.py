@@ -25,7 +25,7 @@ class Company:
         try:
             # abrindo o arquivo de origem
             file_o = open('new_token', 'r+')
-                # escrevendo o conteúdo do arquivo
+            # escrevendo o conteúdo do arquivo
             content = file_o.readlines()
             ACCESS_TOKEN_VALUE = content[0] # Está na primeira linha!
         finally:
