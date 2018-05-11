@@ -45,7 +45,7 @@ print(ACCESS_TOKEN_VALUE)
 
 try:
     # abrindo o arquivo de origem
-    file_o = open('new_token', 'w+')
+    file_o = open('new_token', 'w')
     # escrevendo o conteúdo do arquivo
     file_o.write(ACCESS_TOKEN_VALUE)
 finally:
