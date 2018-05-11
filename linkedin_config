@@ -4,6 +4,5 @@ CLIENT_SECRET=
 REDIRECT_URI=
 AUTHORIZATION_URL=https://www.linkedin.com/uas/oauth2/authorization
 ACCESS_TOKEN_URL=https://www.linkedin.com/uas/oauth2/accessToken
-REDIRECT_RESPONSE=
 USER=
 PASSWD=
