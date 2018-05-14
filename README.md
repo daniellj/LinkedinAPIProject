@@ -77,7 +77,7 @@ REDIRECT_RESPONSE=https://localhost:8080/?code=AQT_EcUxnuLX_npEy8L9S13cVxueJt7wY
 ## Execução
 
 1. Abrir o prompt de comando do terminal Linux
-2. Fazer a chamada ao script **main.py**, conforme exemplo abaixo:
+2. Fazer a chamada ao script **main.py**, passando por parâmetro o(s) nome(s) da(s) empresa(s) que queres efetuar a requisição da consulta, conforme exemplo abaixo:
   - python main.py 'nome_empresa_01' 'nome_empresa_02' 'nome_empresa_N'
   - Exemplo REAL: **python main.py 'devtestco1' 'petrobras'**
 3. Será exibido em tela o resultado, assim como será gerado um arquivo .JSON com a extração dos resultados.
