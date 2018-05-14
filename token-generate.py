@@ -40,14 +40,14 @@ linkedin.fetch_token(ACCESS_TOKEN_URL, client_secret=CLIENT_SECRET, authorizatio
 token_value = linkedin.token
 ACCESS_TOKEN_VALUE = token_value.get('access_token')
 
-print('Valor do ACCESS TOKEN fornecido:')
+print('Valor do ACCESS TOKEN fornecido:','\n')
 print(ACCESS_TOKEN_VALUE)
+print('\n')
+print(token_value.items())
+print('\n')
 
-try:
-    # abrindo o arquivo de origem
-    file_o = open('new_token', 'w')
-    # escrevendo o conteúdo do arquivo
+# escrevendo o conteúdo do TOKEN no arquivo
+with open('new_token.cfg', 'w') as file_o:
     file_o.write(ACCESS_TOKEN_VALUE)
-finally:
     print('Fechando o arquivo de origem', file_o)
     file_o.closed
