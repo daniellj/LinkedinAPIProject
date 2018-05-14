@@ -42,7 +42,7 @@ class Company:
         print('Fechando conexão.', file_o)
         print('')
         file_o.closed
-    
+
         # Ajustando cabeçalhos
         if headers is None:
             headers = {'x-li-format': 'json', 'Content-Type': 'application/json'}
@@ -56,7 +56,7 @@ class Company:
         params.update({'oauth2_access_token': ACCESS_TOKEN_VALUE})
         kw = dict(headers=headers, data=data, params=params, timeout=timeout)
         return(requests.request(method.upper(), url, **kw))
-    
+
     def search_company_by_vanityName(vanityName, selectors=None, headers=None, params=None):
         #Campos para seleção do vanityName: entityStatus,vanityName,id,industries,foundedOn,website,specialties,staffCountRange
         url_vanityName = 'https://www.linkedin.com/company/' + str(vanityName)
@@ -67,7 +67,7 @@ class Company:
         response = Company.make_request(method='GET', url=url_vanityName, headers=headers, params=params)
         # Tratamento de erros
         raise_for_error(response)
-        
+
         if response.status_code == 200:
             return(response.json())
         else:
