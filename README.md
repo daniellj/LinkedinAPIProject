@@ -83,4 +83,4 @@ Para a etapa de executação, considere que o TOKEN já esteja gerado. A partir 
   - python main.py 'nome_empresa_01' 'nome_empresa_02' 'nome_empresa_N'
   - Exemplo REAL: **python main.py 'devtestco1' 'petrobras'**
 3. Será exibido em tela o resultado, assim como será gerado um arquivo .JSON com a extração dos resultados.
-  - O nome padrão de cada arquivo se dará no seguinte formato: **nome_empresa_X_20180514-142230.json**, identificando o momento que foi efetuada a consulta e geração do arquivo da respectiva empresa.
+  - O nome padrão de cada arquivo se dará no seguinte formato: **nome_empresa_X_20180514-142230.json**, identificando o momento que foi efetuada a consulta e geração do arquivo da respectiva empresa.
