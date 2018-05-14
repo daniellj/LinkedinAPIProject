@@ -47,7 +47,7 @@ print(token_value.items())
 print('\n')
 
 # escrevendo o conteúdo do TOKEN no arquivo
-with open('new_token.cfg', 'w') as file_o:
+with open('new_token', 'w') as file_o:
     file_o.write(ACCESS_TOKEN_VALUE)
     print('Fechando o arquivo de origem', file_o)
     file_o.closed
