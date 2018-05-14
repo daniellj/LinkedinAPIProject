@@ -76,6 +76,8 @@ REDIRECT_RESPONSE=https://localhost:8080/?code=AQT_EcUxnuLX_npEy8L9S13cVxueJt7wY
 
 ## Execução
 
+Para a etapa de executação, considere que o TOKEN já esteja gerado. A partir disso, siga as etapas para executar o projeto:
+
 1. Abrir o prompt de comando do terminal Linux
 2. Fazer a chamada ao script **main.py**, passando por parâmetro o(s) nome(s) da(s) empresa(s) que se deseja efetuar a requisição da consulta, conforme exemplo abaixo:
   - python main.py 'nome_empresa_01' 'nome_empresa_02' 'nome_empresa_N'
