@@ -5,7 +5,6 @@
 """
 
 import requests
-import json
 import contextlib
 from linkedin_v2.utils import to_utf8, StringIO, raise_for_error
 
@@ -76,19 +75,3 @@ class Company:
             print('')
             print('Status Code:', response.status_code)
         #print(response.content)
-
-if __name__ == "__main__":
-    # Ajustando o seletor de campos de retorno
-    selectors = ['entityStatus','vanityName','id','industries','foundedOn','website','specialties','staffCountRange']
-    extracted_data = []
-    extracted_data.append(Company.search_company_by_vanityName(vanityName='devtestco1', selectors=selectors))
-
-    if extracted_data:
-        print('')
-        print('ERRO: conteúdo retornado vazio -->>', extracted_data)
-    else:
-        print('')
-        print('Exportando resultado da requisição para o arquivo data.json...')
-        f = open('data.json', 'w')
-        json.dump(extracted_data, f, indent=4)
-        print('Exportação finalizada com sucesso!')
