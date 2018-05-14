@@ -5,16 +5,13 @@
 """
 import json
 from company import Company
+import sys
 
-if __name__ == "__main__":
+def main(company_name):
     # Ajustando o seletor de campos de retorno
     selectors = ['entityStatus','vanityName','id','industries','foundedOn','website','specialties','staffCountRange']
     extracted_data = []
-    
-    # Criando uma lista de empresas
-    #company_list = ['Gerdau', 'Agibank', 'Multiplan', 'Petrobras', 'Google']
-    company_list = ['devtestco1']
-    
+
     for comp in company_list:
         # chamando a função para efetuar a consulta das empresas er colocando o resultado em uma lista
         extracted_data.append(Company.search_company_by_vanityName(vanityName=comp, selectors=selectors))
@@ -30,3 +27,9 @@ if __name__ == "__main__":
         f = open('data.json', 'w')
         json.dump(extracted_data, f, indent=4)
         print('Exportação finalizada com sucesso!')
+
+if __name__ == "__main__":
+    # A chamado à função principal deve ser feita pelo comando: python main.py 'nome_empresa_01' 'nome_empresa_02' 'nome_empresa_N'
+                                                 #Exemplo REAL: python main.py 'devtestco1' 'petrobras'
+    company_list = sys.argv[1:]
+    main(company_list)
