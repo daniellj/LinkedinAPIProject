@@ -22,7 +22,7 @@ Basicamente será fornecida uma lista contendo nomes de empresas e, para cada um
 
 ## Resultados
 
-O formato da saída da requisição da consulta deverá ser exibida em tela e/ou um único arquivo JSON contendo os dados requisitados de todas as empresas fornecidas na lista de entrada.
+O formato da saída da requisição da consulta deverá ser exibida em tela e/ou a exportação para um arquivo JSON para cada empresa consultada contendo os dados solicitados.
 
 ## Lógica da solução desenvolvida
 
@@ -81,3 +81,4 @@ REDIRECT_RESPONSE=https://localhost:8080/?code=AQT_EcUxnuLX_npEy8L9S13cVxueJt7wY
   - python main.py 'nome_empresa_01' 'nome_empresa_02' 'nome_empresa_N'
   - Exemplo REAL: **python main.py 'devtestco1' 'petrobras'**
 3. Será exibido em tela o resultado, assim como será gerado um arquivo .JSON com a extração dos resultados.
+  - O nome padrão de cada arquivo se dará no seguinte formato: **nome_empresa_X_20180514-142230.json**, identificando o momento que foi efetuada a consulta e geração do arquivo da respectiva empresa.
