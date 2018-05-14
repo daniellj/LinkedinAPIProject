@@ -6,6 +6,7 @@
 import json
 from company import Company
 import sys
+import time
 
 def main(company_name):
     # Ajustando o seletor de campos de retorno
@@ -16,17 +17,19 @@ def main(company_name):
         # chamando a função para efetuar a consulta das empresas er colocando o resultado em uma lista
         extracted_data.append(Company.search_company_by_vanityName(vanityName=comp, selectors=selectors))
 
-    if extracted_data:
-        print('')
-        print('ERRO: conteúdo retornado vazio -->>', extracted_data)
-    else:
-        print('')
-        print('Resultado da requisição em tela:', extracted_data)
-        print('')        
-        print('Exportando resultado da requisição para o arquivo data.json...')
-        f = open('data.json', 'w')
-        json.dump(extracted_data, f, indent=4)
-        print('Exportação finalizada com sucesso!')
+        if extracted_data:
+            print('')
+            print('ERRO: conteúdo retornado vazio -->>', extracted_data)
+        else:
+            print('')
+            print('Resultado da requisição em tela da empresa', comp, extracted_data)
+            print('')        
+            # Coletando o "datetime" do momento da geração do arquivo para montar o nome do arquivo distinto por coleta
+            filename = comp + '_' + time.strftime("%Y%m%d-%H%M%S") + '.json'
+            print('Exportando resultado da requisição para o seguinte arquivo JSON:', filename)
+            f = open(filename, 'w')
+            json.dump(extracted_data, f, indent=4)
+            print('Exportação finalizada com sucesso!')
 
 if __name__ == "__main__":
     # A chamado à função principal deve ser feita pelo comando: python main.py 'nome_empresa_01' 'nome_empresa_02' 'nome_empresa_N'
